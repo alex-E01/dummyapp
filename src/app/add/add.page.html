@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-back-outline" text="" defaultHref="/wordpress"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add Custom Posts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+<ion-item>
+  <ion-label position="floating">Post Name</ion-label>
+  <ion-input  [(ngModel)]="post_name" type="text" required="true"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Post Content</ion-label>
+  <ion-input  [(ngModel)]="post_content" type="text" required="true"></ion-input>
+</ion-item>
+<ion-button expand="full" (click)="addpost('bottom')">Submit</ion-button>
+
+</ion-content>

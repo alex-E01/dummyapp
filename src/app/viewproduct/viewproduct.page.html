@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-back-outline" text="" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>View Your  Product</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">View Your  Product</ion-title>
+    </ion-toolbar>
+  </ion-header>
+ 
+  <ion-card >
+    <img alt="Silhouette of mountains" [src]="singleproduct.thumbnail" />
+    <ion-card-header>
+      <ion-card-title>{{singleproduct.title}}</ion-card-title>
+      <ion-card-subtitle>Percentage :{{singleproduct.discountPercentage}}</ion-card-subtitle>
+      <ion-card-subtitle>Stock : {{singleproduct.stock}}</ion-card-subtitle>
+      <ion-card-subtitle>Rating : {{singleproduct.rating}}</ion-card-subtitle>
+      <ion-card-subtitle>Brand : {{singleproduct.brand}}</ion-card-subtitle>
+      <ion-card-subtitle>Category : {{singleproduct.category}}</ion-card-subtitle>
+      <ion-card-subtitle>Price: {{singleproduct.price}}rs</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+     <p> <span>Product Description</span></p>
+      {{singleproduct.description}}
+    </ion-card-content>
+    <ion-card-title>----Product Images----</ion-card-title>
+    <img [src]="img" *ngFor="let img of singleproduct.images">
+  </ion-card>
+  
+</ion-content>
